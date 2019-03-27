@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.4.0'
 
-  s.add_dependency 'activesupport', '>= 5.2.0'
+  s.add_dependency 'activesupport', '>= 4.2.0'
 
-  s.add_development_dependency 'activemodel', '>= 5.2.0'
-  s.add_development_dependency 'bundler', '~> 1.15'
+  s.add_development_dependency 'activemodel', '>= 4.2.0'
+  s.add_development_dependency 'bundler', '>= 1.15'
 
   s.files      = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- test/*`.split("\n")
