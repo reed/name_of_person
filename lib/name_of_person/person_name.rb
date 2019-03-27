@@ -6,12 +6,11 @@ module NameOfPerson
 
     def self.full(full_name)
       first, last = full_name.to_s.squish.split(/\s/, 2)
-      new(first, last) if first.present?
+      new(first, last) if first.present? || last.present?
     end
 
     def initialize(first, last = nil)
-      raise ArgumentError, "First name is required" unless first.present?
-      @first, @last = first, last
+      @first, @last = *(first.present? ? [first, last] : [last, first])
       super full
     end
 
